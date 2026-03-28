@@ -21,7 +21,6 @@ Folder: [`screenshots/`](screenshots/)
 | `03-fake-ap-running.png` | Rogue AP deployed, SSID visible |
 | `04-captive-portal.png` | Phishing login page (captive portal) |
 | `05-credentials-captured.png` | Terminal showing "Credentials captured!" |
-| `infographic.png` | Timeline infographic from research presentation |
 
 ## How to Export Screenshots from pres.pptx
 
