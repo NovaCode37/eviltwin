@@ -2,25 +2,25 @@
 
 ```mermaid
 flowchart TD
-    subgraph HOST["🖥️ Physical Host — Windows 10/11"]
+    subgraph HOST["Physical Host — Windows 10/11"]
         subgraph VBOX["Oracle VM VirtualBox 7.0"]
-            subgraph INTERNAL["🔒 Internal Network (air-gapped)"]
+            subgraph INTERNAL["Internal Network (air-gapped)"]
                 KALI["Kali Linux 2024.1\n─────────────────\nairgeddon v11.22\nhostapd\ndnsmasq\nlighttpd\niptables\n\n[ATTACKER]"]
             end
         end
         WIFI["Physical Wi-Fi adapter\n(host network)"]
     end
 
-    ANDROID["📱 Android Device\n[VICTIM]\n\nManual connection\nto rogue AP only"]
+    ANDROID["Android Device\n[VICTIM]\n\nManual connection\nto rogue AP only"]
 
-    INTERNET(("🌐 Internet"))
+    INTERNET(("Internet"))
 
     KALI <-->|"Internal Network ONLY\nNo bridge to host"| ANDROID
     HOST -.- WIFI
     WIFI -.- INTERNET
 
-    KALI -.->|"❌ NO ACCESS"| INTERNET
-    ANDROID -.->|"❌ NO ACCESS"| INTERNET
+    KALI -.->|"NO ACCESS"| INTERNET
+    ANDROID -.->|"NO ACCESS"| INTERNET
 
     style HOST fill:#1a1a2e,color:#e0e0e0,stroke:#4a9eff
     style VBOX fill:#16213e,color:#e0e0e0,stroke:#2980b9
