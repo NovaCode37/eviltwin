@@ -67,11 +67,11 @@ Public Wi-Fi networks (cafes, airports, universities) have become standard infra
 
 ```mermaid
 flowchart LR
-    A["🔍 1. Reconnaissance\nairodump-ng\nmonitor mode"]
-    B["📡 2. Evil Twin\nhostapd\ncloned SSID"]
-    C["💥 3. Deauth\naireplay-ng\nforced disconnect"]
-    D["🌐 4. Interception\ndnsmasq + iptables\nall traffic routed"]
-    E["🎣 5. Phishing Portal\nlighttpd\ncredentials captured"]
+    A["1. Reconnaissance\nairodump-ng\nmonitor mode"]
+    B["2. Evil Twin\nhostapd\ncloned SSID"]
+    C["3. Deauth\naireplay-ng\nforced disconnect"]
+    D["4. Interception\ndnsmasq + iptables\nall traffic routed"]
+    E["5. Phishing Portal\nlighttpd\ncredentials captured"]
     A --> B --> C --> D --> E
     style C fill:#c0392b,color:#fff
     style E fill:#c0392b,color:#fff
